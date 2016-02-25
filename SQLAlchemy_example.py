@@ -5,7 +5,7 @@ Base = declarative_base()
 
 class Pet(Base):
 	__tablename__ = "pet"
-	id = sqla.Column(sqla.Integer, primary_key=True) 
+	id = sqla.Column(sqla.Integer, primary_key=True, autoincrement=True) 
 	type = sqla.Column(sqla.String(16))
 	breed = sqla.Column(sqla.String(32)) 
 	gender = sqla.Column(sqla.Enum("Male", "Female")) 
@@ -15,7 +15,6 @@ sqlite3_engine = sqla.create_engine('sqlite:///pet.db')
 Base.metadata.create_all(sqlite3_engine)
 
 pet = Pet()
-pet.id = 1
 pet.type = 'cat'
 pet.breed = 'syberian'
 pet.gender = 'Female'
