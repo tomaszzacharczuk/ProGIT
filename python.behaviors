@@ -1,0 +1,22 @@
+[
+ [:app :lt.objs.plugins/load-js ["codemirror/python.js" "python_compiled.js"]]
+
+ [:clients :lt.plugins.python/ipython-error]
+ [:clients :lt.plugins.python/pyzmq-error]
+
+ [:editor.python :lt.plugins.python/python-exception]
+ [:editor.python :lt.plugins.python/on-eval]
+ [:editor.python :lt.plugins.python/on-eval.one]
+ [:editor.python :lt.plugins.python/python-result]
+ [:editor.python :lt.plugins.python/python-success]
+ [:editor.python :lt.plugins.python/python-printer]
+ [:editor.python :lt.plugins.python/python-watch]
+ [:editor.python :lt.plugins.python/python-image]
+ [:editor.python :lt.plugins.python/watch-src]
+ [:editor.python :lt.object/add-tag :watchable]
+
+ [:files :lt.objs.files/file-types [{:exts [:py :pyw], :mime "text/x-python", :tags [:editor.python], :name "Python"}]]
+
+ [:python.lang :lt.plugins.python/eval!]
+ [:python.lang :lt.plugins.python/connect]
+]
